@@ -19,4 +19,4 @@ Again an example of emitter input differential amplifiers - the circuit tries to
 
 ### Notes
 - Dual tracking is achieved by sinking/sourcing the same current through the set potentiometers, which creates a voltage across it based on the resistance. Since the current source outputs would otherwise be "floating" (i.e., the voltage across the shunt is constant but there is no guarantee as to where it is relative to ground), two 1M balance resistors connected to ground are added. 
-- 
+- The value of the compensation resistor between the gate and drain of each MOSFET depends on the particular MOSFET type - experiment with different resistor values between around 5K and 10K (could be more or less) to get the best compensation.
