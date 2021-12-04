@@ -1,6 +1,8 @@
 # Discrete Linear Power Supply
 Fully discrete dual tracking linear supply with CC and CV
 
+![alt-text](https://github.com/NNNIIndia/Discrete-Linear-Power-Supply/blob/main/pictures/20211204_003440.jpg)
+
 ## Why?
 I was not fully satsified with my previous linear supply based on op-amps, so I decided that I was done with the "black box" approach and decided to go fully discrete this time. 
 
@@ -19,4 +21,13 @@ Again an example of emitter input differential amplifiers - the circuit tries to
 
 ### Notes
 - Dual tracking is achieved by sinking/sourcing the same current through the set potentiometers, which creates a voltage across it based on the resistance. Since the current source outputs would otherwise be "floating" (i.e., the voltage across the shunt is constant but there is no guarantee as to where it is relative to ground), two 1M balance resistors connected to ground are added. 
-- The value of the compensation resistor between the gate and drain of each MOSFET depends on the particular MOSFET type - experiment with different resistor values between around 5K and 10K (could be more or less) to get the best compensation.
+- The value of the compensation resistor and capacitor between the gate and drain of each MOSFET depends on the particular MOSFET type - experiment with different R and C values to get the best compensation, in my case 100nF and 56 Ohms barely worked. 
+
+## Should I make one?
+It's up to you - I created this mostly as a challenge but with the hopes of being able to use it - but it was not to be - another "Look, ma! No ICs" circuit bending victim. 
+- Oscillations on the output
+- Pathetic power supply rejection
+- Output voltage drifts randomly
+
+## Conclusion
+Some interesting circuit ideas, if you want to pick something up.
